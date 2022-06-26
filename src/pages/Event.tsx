@@ -1,6 +1,7 @@
 import { HandPointing } from "phosphor-react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
@@ -27,10 +28,9 @@ export function Event() {
                 }
                 <Sidebar isNavOpen={isNavOpen} />
             </main>
+            <Footer />
         </div>
     )
 }
 
-// fazer componente footer (repetir)
 // botar aniamcao de fade in na subscribe
-// nav burguer menu

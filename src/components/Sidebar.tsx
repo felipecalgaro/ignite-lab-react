@@ -10,7 +10,7 @@ export function Sidebar({ isNavOpen }: SidebarProps) {
     const { data } = useGetLessonsQuery()
 
     return (
-        <aside className={classNames("lg:w-[348px] w-screen lg:relative absolute bg-gray-700 border-l p-6 border-gray-600 lg:block", {
+        <aside className={classNames("lg:w-[348px] w-screen min-h-screen lg:relative absolute bg-gray-700 border-l p-6 border-gray-600 lg:block", {
             'hidden': !isNavOpen,
             'block': isNavOpen
         })}>
