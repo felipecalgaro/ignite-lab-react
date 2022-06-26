@@ -6,6 +6,7 @@ export function Logo() {
             height="34"
             fill="none"
             viewBox="0 0 237 34"
+            className="sm:w-auto w-2/3"
         >
             <path
                 fill="#fff"

@@ -1,8 +1,8 @@
-import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import { Books, CaretRight, DiscordLogo, Lightning, Image } from "phosphor-react";
 import { DefaultUi, Player, Youtube } from "@vime/react";
+import { useGetLessonBySlugQuery } from "../graphql/generated";
 
 import "@vime/core/themes/default.css"
-import { useGetLessonBySlugQuery } from "../graphql/generated";
 
 interface VideoProps {
     lessonSlug: string
@@ -25,7 +25,7 @@ export function Video(props: VideoProps) {
 
     return (
         <div className="flex-1">
-            <div className="bg-black flex justify-center">
+            <div className="bg-gray-900 flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
                         <Youtube videoId={data.lesson.videoId} />
@@ -35,7 +35,7 @@ export function Video(props: VideoProps) {
             </div>
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-center gap-16">
+                <div className="flex items-center flex-wrap gap-16">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
@@ -59,7 +59,7 @@ export function Video(props: VideoProps) {
                         )}
                     </div>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 sm:w-auto w-full">
                         <a href="" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
                             <DiscordLogo size={24} />
                             Comunidade do Discord
@@ -71,13 +71,13 @@ export function Video(props: VideoProps) {
                         </a>
                     </div>
                 </div>
-                <div className="gap-8 mt-20 grid grid-cols-2">
+                <div className="gap-8 mt-20 grid md:grid-cols-2 grid-cols-1">
                     <a className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" href="">
                         <div className="bg-green-700 h-full p-6 flex items-center">
-                            <FileArrowDown size={40} />
+                            <Books size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">Material complementar</strong>
+                            <strong className="sm:text-2xl text-lg">Material complementar</strong>
                             <p className="text-sm text-gray-200 mt-2">Acesse o material complementar para acelerar seu desenvolvimento</p>
                         </div>
                         <div className="h-full p-6 flex items-center">
@@ -86,10 +86,10 @@ export function Video(props: VideoProps) {
                     </a>
                     <a className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" href="">
                         <div className="bg-green-700 h-full p-6 flex items-center">
-                            <FileArrowDown size={40} />
+                            <Image size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">Wallpapers exclusivos</strong>
+                            <strong className="sm:text-2xl text-lg">Wallpapers exclusivos</strong>
                             <p className="text-sm text-gray-200 mt-2">Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina</p>
                         </div>
                         <div className="h-full p-6 flex items-center">
