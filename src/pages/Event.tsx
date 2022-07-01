@@ -18,9 +18,9 @@ export function Event() {
                 {(slug && !isNavOpen)
                     ? <Video lessonSlug={slug} />
                     : (
-                        <div className="flex-1 flex items-center gap-4 justify-center bg-blur bg-cover bg-no-repeat text-stone-400">
+                        <div className="flex-1 flex items-center gap-4 justify-center text-stone-400">
                             <h1 className="text-3xl font-sans">
-                                Selecione uma aula
+                                Select a class
                             </h1>
                             <HandPointing size={48} />
                         </div>
@@ -32,5 +32,3 @@ export function Event() {
         </div>
     )
 }
-
-// botar aniamcao de fade in na subscribe

@@ -17,7 +17,7 @@ export function Footer() {
                     <GithubLogo size={24} />
                     <p className="font-medium text-sm font-sans">Felipe Calgaro</p>
                 </a>
-                <p className="font-medium text-sm text-center font-sans text-gray-300">Rocketseat - Todos os direitos reservados</p>
+                <p className="font-medium text-sm text-center font-sans text-gray-300">Rocketseat - All rights reserved</p>
             </div>
         </footer>
     )
