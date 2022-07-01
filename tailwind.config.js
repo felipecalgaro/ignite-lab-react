@@ -5,6 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        blink: {
+          '0%, 100%': { display: 'none' },
+          '50%': { display: 'block' }
+        }
+      },
+      animation: {
+        blink: 'blink 1s linear infinite'
+      },
       backgroundImage: {
         blur: 'url(/src/assets/blur-background.png)'
       },
