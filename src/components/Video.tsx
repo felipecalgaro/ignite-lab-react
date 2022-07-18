@@ -1,8 +1,8 @@
-import { Books, CaretRight, DiscordLogo, Lightning, Image } from "phosphor-react";
 import { DefaultUi, Player, Youtube } from "@vime/react";
+import { Books, CaretRight, DiscordLogo, Image, Lightning } from "phosphor-react";
 import { useGetLessonBySlugQuery } from "../graphql/generated";
 
-import "@vime/core/themes/default.css"
+import "@vime/core/themes/default.css";
 
 interface VideoProps {
     lessonSlug: string
@@ -18,7 +18,7 @@ export function Video(props: VideoProps) {
     if (!data || !data.lesson) {
         return (
             <div className="flex-1">
-                <p>Carregando...</p>
+                <p>Loading...</p>
             </div>
         )
     }
@@ -77,8 +77,8 @@ export function Video(props: VideoProps) {
                             <Books size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="sm:text-2xl text-lg">Complementary material</strong>
-                            <p className="text-sm text-gray-200 mt-2">Access the complementary material to accelerate your progress</p>
+                            <strong className="sm:text-2xl text-lg">Additional material</strong>
+                            <p className="text-sm text-gray-200 mt-2">Access the additional material to boost your programming skills</p>
                         </div>
                         <div className="h-full p-6 flex items-center">
                             <CaretRight size={24} />
